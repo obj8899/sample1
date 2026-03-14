@@ -41,7 +41,7 @@ export default function PredictionForm({ onResult }: Props) {
     }, 400)
 
     try {
-      const input = values as PredictionInput
+     const input = values as unknown as PredictionInput
       let result: PredictionOutput
       try {
         result = await runPrediction(input)
